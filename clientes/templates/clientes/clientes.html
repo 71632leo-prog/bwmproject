@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | BMW Premium</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            background:#111827;
+            color:white;
+            padding:20px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .logo span{
+            color:#00A3FF;
+        }
+
+        .btn{
+            background:#00A3FF;
+            color:white;
+            text-decoration:none;
+            padding:12px 25px;
+            border-radius:30px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#0085cf;
+        }
+
+        /* HEADER */
+
+        .header{
+            background:linear-gradient(135deg,#111827,#1f2937);
+            color:white;
+            text-align:center;
+            padding:70px 20px;
+        }
+
+        .header h1{
+            font-size:50px;
+            margin-bottom:10px;
+        }
+
+        .header p{
+            color:#d1d5db;
+        }
+
+        /* CONTENEDOR */
+
+        .container{
+            width:90%;
+            max-width:1300px;
+            margin:auto;
+            margin-top:-40px;
+        }
+
+        /* CARD */
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,.1);
+        }
+
+        .top-bar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:25px;
+            flex-wrap:wrap;
+            gap:15px;
+        }
+
+        .top-bar h2{
+            color:#111827;
+        }
+
+        /* TABLA */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        table thead{
+            background:#111827;
+            color:white;
+        }
+
+        table th,
+        table td{
+            padding:15px;
+            text-align:center;
+        }
+
+        table tbody tr{
+            border-bottom:1px solid #e5e7eb;
+            transition:.3s;
+        }
+
+        table tbody tr:hover{
+            background:#f3f4f6;
+        }
+
+        /* BOTONES */
+
+        .btn-editar{
+            background:#00A3FF;
+            color:white;
+            padding:8px 15px;
+            border-radius:8px;
+            text-decoration:none;
+        }
+
+        .btn-eliminar{
+            background:#ef4444;
+            color:white;
+            padding:8px 15px;
+            border-radius:8px;
+            text-decoration:none;
+        }
+
+        .btn-editar:hover{
+            background:#0085cf;
+        }
+
+        .btn-eliminar:hover{
+            background:#dc2626;
+        }
+
+        /* ESTADISTICAS */
+
+        .stats{
+            margin:40px 0;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .stat-card{
+            background:white;
+            padding:25px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
+        }
+
+        .stat-card h3{
+            color:#00A3FF;
+            font-size:35px;
+        }
+
+        .stat-card p{
+            color:#666;
+        }
+
+        footer{
+            background:#111827;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            BMW <span>Premium</span>
+        </div>
+
+        <a href="#" class="btn">
+            + Nuevo Cliente
+        </a>
+    </nav>
+
+    <section class="header">
+        <h1>Gestión de Clientes</h1>
+        <p>Administra todos los clientes registrados de BMW Premium Motors</p>
+    </section>
+
+    <div class="container">
+
+        <!-- ESTADÍSTICAS -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>150</h3>
+                <p>Clientes Totales</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>45</h3>
+                <p>Clientes Nuevos</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>98%</h3>
+                <p>Satisfacción</p>
+            </div>
+
+        </div>
+
+        <!-- TABLA -->
+
+        <div class="card">
+
+            <div class="top-bar">
+                <h2>Listado de Clientes</h2>
+
+                <a href="#" class="btn">
+                    Registrar Cliente
+                </a>
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Ciudad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>juan@gmail.com</td>
+                        <td>4771234567</td>
+                        <td>León</td>
+                        <td>
+                            <a href="#" class="btn-editar">Editar</a>
+                            <a href="#" class="btn-eliminar">Eliminar</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>María López</td>
+                        <td>maria@gmail.com</td>
+                        <td>4779876543</td>
+                        <td>Guanajuato</td>
+                        <td>
+                            <a href="#" class="btn-editar">Editar</a>
+                            <a href="#" class="btn-eliminar">Eliminar</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <footer>
+        © 2025 BMW Premium Motors | Gestión de Clientes
+    </footer>
+
+</body>
+</html>
